@@ -1,0 +1,26 @@
+button {
+    margin: 16px;
+}
+
+.hora {
+    width: 200px;
+}
+
+.horario {
+    margin: 0px 64px;
+}
+
+.App {
+    display: flex;
+    margin: 40px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: rgba(10,23,55,0.5);
+    
+}
+body {
+    background-image: url("https://peqengenhariajr.com.br/wp-content/uploads/2021/01/agua.jpg");
+    background-color: #000000; /* Used if the image is unavailable */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
