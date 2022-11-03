@@ -18,6 +18,19 @@ body {
     text-align: center;  
 }
 
+h3 {
+    margin: 0;
+}
+
+h4  {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
 button {
     margin: 16px;
 }
@@ -33,4 +46,8 @@ button {
 
 a {
     color: #ffffff;
+}
+
+img {
+    width: 150px;
 }

@@ -1,5 +1,6 @@
 import { useState } from "react"
 import './Contador.css'
+import adorei from '../../img/adorei.jpg'
 
 function Contador() {
 
@@ -9,6 +10,7 @@ function Contador() {
   const [metaDiaria, setMetaDiaria] = useState(1000)
   const [mensagem, setMensagem] = useState()
   const [horario, setHorario] = useState("")
+  const [imagem, setImagem] = useState("")
 
   function somar() {
     if ((mls > 0)) {
@@ -22,6 +24,7 @@ function Contador() {
 
       if ((total + mls) >= metaDiaria) {
         setMensagem("Adoreeei, você atingiu sua meta diária!")
+        setImagem(adorei)
       }
     } else {
       setMensagem("A quantidade de ML do copo deve ser maior que 0")
@@ -36,6 +39,7 @@ function Contador() {
     setTotal(0)
     setMensagem()
     setHorario("")
+    setImagem("")
   }
 
   return (
@@ -53,6 +57,7 @@ function Contador() {
             <h3>Copos: {contador}</h3>
             <h3>Total de água consumida: {total} ML</h3>
           </div>
+          <img src={imagem}/>
           <h4>{mensagem}</h4>
         </main>
         <section className="horario">
