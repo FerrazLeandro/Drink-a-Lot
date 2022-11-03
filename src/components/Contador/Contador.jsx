@@ -17,14 +17,14 @@ function Contador() {
         setTotal(prevState => prevState + mls)
         setHorario(horario + (parseInt(contador) + 1) + ' - ' + new Date().toLocaleString() + ' ✔ ')
       } else {
-        setMensagem("A quantidade de ML deve ser maior que 0")
+        setMensagem("A quantidade de ML da meta diária deve ser maior que 0")
       }
 
       if ((total + mls) >= metaDiaria) {
         setMensagem("Adoreeei, você atingiu sua meta diária!")
       }
     } else {
-      setMensagem("A quantidade de ML deve ser maior que 0")
+      setMensagem("A quantidade de ML do copo deve ser maior que 0")
     }
 
   }
@@ -40,23 +40,28 @@ function Contador() {
 
   return (
     <>
-      <main>
-        <h2>Consumo diário de água 🥤</h2>
-        <p>Medida do copo em ML:</p>
-        <input type="number" min={0} value={mls} onChange={e => setMls(parseInt(e.target.value))} placeholder='Medida' />
-        <p>Meta diária em ML: </p>
-        <input type="number" min={0} value={metaDiaria} onChange={e => setMetaDiaria(parseInt(e.target.value))} placeholder='Meta diária' />
-        <div>
-          <button onClick={somar}>Beber</button>
-          <button onClick={zerar}>Zerar</button>
-          <h3>Copos: {contador}</h3>
-          <h3>Total de água consumida: {total} ML</h3>
-        </div>
-        <h4>{mensagem}</h4>
-      </main>
-      <section className="horario">
-        <p className="hora">{horario}</p>
-      </section>
+      <div className="card">
+        <main>
+          <h2>Consumo diário de água 🥤</h2>
+          <p>Medida do copo em ML:</p>
+          <input type="number" min={0} value={mls} onChange={e => setMls(parseInt(e.target.value))} placeholder='Medida' />
+          <p>Meta diária em ML: </p>
+          <input type="number" min={0} value={metaDiaria} onChange={e => setMetaDiaria(parseInt(e.target.value))} placeholder='Meta diária' />
+          <div>
+            <button onClick={somar}>Beber</button>
+            <button onClick={zerar}>Zerar</button>
+            <h3>Copos: {contador}</h3>
+            <h3>Total de água consumida: {total} ML</h3>
+          </div>
+          <h4>{mensagem}</h4>
+        </main>
+        <section className="horario">
+          <p className="hora">{horario}</p>
+        </section>
+      </div>
+      <footer>
+        <a href="https://leandroferraz.tech/">© 2022 Copyright: leandroferraz.tech</a>
+      </footer>
     </>
   )
 
