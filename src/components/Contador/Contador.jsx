@@ -65,7 +65,7 @@ function Contador() {
         </section>
       </div>
       <footer>
-        <a href="https://leandroferraz.tech/">© 2022 Copyright: leandroferraz.tech</a>
+        <a href="https://leandroferraz.tech/">© 2022 Copyright: Leandro Ferraz</a>
       </footer>
     </>
   )
